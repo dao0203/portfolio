@@ -1,13 +1,5 @@
 import { json } from "node:stream/consumers";
 
-export class QiitaItemResponse {
-    list: ReposFile[];
-
-    constructor(data: any) {
-        this.list = data.map((item: any) => new ReposFile(item));
-    }
-}
-
 export class ReposFile {
     name: string;
     path: string;
